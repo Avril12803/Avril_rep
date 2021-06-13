@@ -1,18 +1,44 @@
+var btn_red;
+var btn_green;
+
+var r = 0;
+var g = 0;
+var b = 0;
+
+function setup() {
+  createCanvas(400, 400);
+  
+
+  btn_red = createButton("RED");
+  btn_red.position(100,50)
+  btn_red.mousePressed(red_bg);
 
 
-var a = prompt('Enter the first variable: ');
-var b = prompt('Enter the second variable:')
+btn_green = createButton("GREEN")
+btn_green.position(250,50)
+btn_green.mousePressed(green_bg)
 
-function setup(){
-  var b2 = createButton("click here to Swap");
-      b2.mousePressed(swap);
-  }
-function swap(){
-  [a,b]=[b,a];
-  console.log("value of a after swapping", +a)
-  console.log(" value of b after swapping", +b)
 }
 
-function draw()
+function draw() {
+  background(r,g,b);
+}
+
+function red_bg()
 {
+  r = 255
+  g = 0
+  b = 0
+
 }
+
+
+function green_bg()
+{
+   r = 0
+   g = 255
+   b = 0
+
+}
+
+
